@@ -19,3 +19,11 @@ body {
 a {
   color: inherit;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 110px;
+}
