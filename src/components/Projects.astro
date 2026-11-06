@@ -14,15 +14,13 @@
     <!-- TULIPA -->
     <article class="project-card">
       <div class="project-preview">
-        <div class="preview-content">
-          <span class="preview-label">FEATURED PROJECT</span>
-          <h3>TULIPA</h3>
-          <p>Online Flower Shop</p>
-          <div class="preview-decoration">
-            <span>✿</span>
-          </div>
-        </div>
-      </div>
+          <img
+          src="/images/tulipa-preview.png"
+          alt="Tulipa online flower shop showing its product catalog and storefront"
+          loading="lazy"
+          decoding="async"
+          />
+     </div>
 
       <div class="project-info">
         <div class="project-title">
@@ -108,51 +106,28 @@
     transition: transform 0.3s, border-color 0.3s;
   }
 
-  .project-card:hover {
-    transform: translateY(-5px);
-    border-color: #d6a62e;
-  }
-
   .project-preview {
-    min-height: 260px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:
-      radial-gradient(circle at center, #263b55 0%, #101b2d 70%);
-    border-bottom: 1px solid #263449;
-    overflow: hidden;
+  min-height: 0;
+  height: auto;
+  background: #101b2d;
+  border-bottom: 1px solid #263449;
+  overflow: hidden;
   }
 
-  .preview-content {
-    text-align: center;
-    position: relative;
+  .project-preview img {
+     width: 100%;
+     height: auto;
+     display: block;
+     object-fit: contain;
+     object-position: center;
   }
 
-  .preview-label {
-    color: #d6a62e;
-    font-size: 10px;
-    letter-spacing: 4px;
-    font-weight: 700;
+  .project-card:hover .project-preview img {
+    transform: scale(1.03);
   }
 
-  .preview-content h3 {
-    font-size: 55px;
-    letter-spacing: 8px;
-    margin: 15px 0 0;
-    color: #f8fafc;
-  }
+ 
 
-  .preview-content p {
-    color: #94a3b8;
-    font-size: 14px;
-  }
-
-  .preview-decoration {
-    color: #d6a62e;
-    font-size: 35px;
-    margin-top: 10px;
-  }
 
   .project-info {
     padding: 30px;
