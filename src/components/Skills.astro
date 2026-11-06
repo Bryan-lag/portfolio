@@ -1,8 +1,12 @@
 
-<section id="skills" class="skills">
+<section id="skills" class="skills" aria-labelledby="skills-title">
   <div class="section-heading">
     <p class="eyebrow">MY TECHNICAL BACKGROUND</p>
-    <h2>Technical <span>Skills.</span></h2>
+
+    <h2 id="skills-title">
+      Technical <span>Skills.</span>
+    </h2>
+
     <p class="section-description">
       Technologies and tools I use to build, develop
       and deploy modern applications.
@@ -10,75 +14,81 @@
   </div>
 
   <div class="skills-grid">
+
+    <!-- FRONTEND -->
     <article class="skill-card">
       <div class="card-heading">
-        <span class="number">01</span>
+        <span class="number" aria-hidden="true">01</span>
         <h3>Frontend Development</h3>
       </div>
 
       <p>Building responsive and interactive user interfaces.</p>
 
-      <div class="skill-list">
-        <span>JavaScript</span>
-        <span>React</span>
-        <span>HTML5</span>
-        <span>CSS3</span>
-        <span>Tailwind CSS</span>
-        <span>Bootstrap</span>
-      </div>
+      <ul class="skill-list" aria-label="Frontend technologies">
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Tailwind CSS</li>
+        <li>Bootstrap</li>
+      </ul>
     </article>
 
+    <!-- BACKEND -->
     <article class="skill-card">
       <div class="card-heading">
-        <span class="number">02</span>
+        <span class="number" aria-hidden="true">02</span>
         <h3>Backend Development</h3>
       </div>
 
       <p>Developing APIs and server-side application logic.</p>
 
-      <div class="skill-list">
-        <span>Python</span>
-        <span>FastAPI</span>
-        <span>PHP</span>
-        <span>Laravel</span>
-        <span>Java (Basic)</span>
-        <span>HTTP</span>
-      </div>
+      <ul class="skill-list" aria-label="Backend technologies">
+        <li>Python</li>
+        <li>FastAPI</li>
+        <li>PHP</li>
+        <li>Laravel</li>
+        <li>Java (Basic)</li>
+        <li>HTTP</li>
+      </ul>
     </article>
 
+    <!-- DATABASES -->
     <article class="skill-card">
       <div class="card-heading">
-        <span class="number">03</span>
+        <span class="number" aria-hidden="true">03</span>
         <h3>Databases</h3>
       </div>
 
       <p>Working with relational and non-relational databases.</p>
 
-      <div class="skill-list">
-        <span>PostgreSQL</span>
-        <span>MySQL</span>
-        <span>MongoDB</span>
-      </div>
+      <ul class="skill-list" aria-label="Database technologies">
+        <li>PostgreSQL</li>
+        <li>MySQL</li>
+        <li>MongoDB</li>
+      </ul>
     </article>
 
+    <!-- TOOLS -->
     <article class="skill-card">
       <div class="card-heading">
-        <span class="number">04</span>
+        <span class="number" aria-hidden="true">04</span>
         <h3>Tools & Technologies</h3>
       </div>
 
       <p>Tools for development, version control and deployment.</p>
 
-      <div class="skill-list">
-        <span>Git</span>
-        <span>GitHub</span>
-        <span>Docker</span>
-        <span>Vercel</span>
-        <span>Render</span>
-        <span>CI/CD</span>
-        <span>UiPath (Basic)</span>
-      </div>
+      <ul class="skill-list" aria-label="Development tools">
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>Docker</li>
+        <li>Vercel</li>
+        <li>Render</li>
+        <li>CI/CD</li>
+        <li>UiPath (Basic)</li>
+      </ul>
     </article>
+
   </div>
 </section>
 
@@ -164,15 +174,29 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
-  .skill-list span {
+  .skill-list li {
     color: #cbd5e1;
     background: #192840;
     border: 1px solid #334155;
     padding: 9px 13px;
     border-radius: 4px;
     font-size: 12px;
+  }
+
+  /* Reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .skill-card {
+      transition: none;
+    }
+
+    .skill-card:hover {
+      transform: none;
+    }
   }
 
   @media (max-width: 700px) {

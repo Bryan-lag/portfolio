@@ -1,10 +1,10 @@
 
-<section id="about" class="about">
+<section id="about" class="about" aria-labelledby="about-title">
   <div class="about-content">
     <div class="about-text">
       <p class="eyebrow">GET TO KNOW ME</p>
 
-      <h2>
+      <h2 id="about-title">
         Turning ideas into
         <span>real solutions.</span>
       </h2>
@@ -26,33 +26,33 @@
         real-world projects.
       </p>
 
-      <div class="focus">
-        <div>
-          <span class="focus-number">01</span>
+      <ul class="focus" aria-label="Areas of focus">
+        <li>
+          <span class="focus-number" aria-hidden="true">01</span>
           <span>Frontend Development</span>
-        </div>
+        </li>
 
-        <div>
-          <span class="focus-number">02</span>
+        <li>
+          <span class="focus-number" aria-hidden="true">02</span>
           <span>Backend Development</span>
-        </div>
+        </li>
 
-        <div>
-          <span class="focus-number">03</span>
+        <li>
+          <span class="focus-number" aria-hidden="true">03</span>
           <span>Database & Deployment</span>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
 
-    <div class="project-card">
+    <article class="project-card" aria-labelledby="tulipa-title">
       <div class="card-top">
         <span class="project-label">FEATURED PROJECT</span>
         <span class="status">LIVE PROJECT</span>
       </div>
 
       <div class="project-visual">
-        <div class="project-icon">T.</div>
-        <h3>TULIPA</h3>
+        <div class="project-icon" aria-hidden="true">T.</div>
+        <h3 id="tulipa-title">TULIPA</h3>
         <p>Flower E-commerce Platform</p>
       </div>
 
@@ -62,7 +62,7 @@
           to manage flower products and customer orders.
         </p>
 
-        <div class="stack">
+        <div class="stack" aria-label="Technologies used">
           <span>React</span>
           <span>FastAPI</span>
           <span>PostgreSQL</span>
@@ -75,10 +75,12 @@
           rel="noopener noreferrer"
           class="project-link"
         >
-          Explore live project ↗
+          Explore live project
+          <span aria-hidden="true">↗</span>
+          <span class="sr-only">(opens in a new tab)</span>
         </a>
       </div>
-    </div>
+    </article>
   </div>
 </section>
 
@@ -122,19 +124,21 @@
   }
 
   .focus {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    margin-top: 35px;
-  }
+   display: flex;
+   flex-direction: column;
+   gap: 18px;
+   margin-top: 35px;
+   padding: 0;
+   list-style: none;
+ }
 
-  .focus div {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    color: #e2e8f0;
-    font-size: 14px;
-  }
+  .focus li {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+   color: #e2e8f0;
+   font-size: 14px;
+ }
 
   .focus-number {
     color: #d6a62e;
@@ -234,8 +238,14 @@
   }
 
   .project-link:hover {
-    color: #f5c95b;
-  }
+  color: #f5c95b;
+}
+
+  .project-link:focus-visible {
+   outline: 2px solid #d6a62e;
+   outline-offset: 5px;
+   border-radius: 3px;
+} 
 
   @media (max-width: 850px) {
     .about-content {
@@ -247,4 +257,16 @@
       padding: 80px 0;
     }
   }
+
+  .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 </style>

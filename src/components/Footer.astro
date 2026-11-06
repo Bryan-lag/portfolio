@@ -1,24 +1,32 @@
 
-<footer class="footer">
-  <span>BASED IN GUATEMALA</span>
-  <span>AVAILABLE FOR REMOTE OPPORTUNITIES</span>
+<footer class="footer" aria-label="Site information">
+  <p>BASED IN GUATEMALA</p>
+  <p>AVAILABLE FOR REMOTE OPPORTUNITIES</p>
 </footer>
 
 <style>
   .footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 12px;
     padding: 25px 0;
     border-top: 1px solid #263247;
-    color: #64748b;
+    color: #94a3b8;
     font-size: 10px;
     letter-spacing: 2px;
+  }
+
+  .footer p {
+    margin: 0;
   }
 
   @media (max-width: 600px) {
     .footer {
       flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      text-align: left;
     }
   }
 </style>
