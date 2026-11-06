@@ -1,0 +1,250 @@
+
+<section id="about" class="about">
+  <div class="about-content">
+    <div class="about-text">
+      <p class="eyebrow">GET TO KNOW ME</p>
+
+      <h2>
+        Turning ideas into
+        <span>real solutions.</span>
+      </h2>
+
+      <p class="description">
+        I'm a Full-Stack Developer passionate about building
+        modern, functional and user-friendly web applications.
+      </p>
+
+      <p class="description">
+        I enjoy working across the entire development process,
+        from designing interfaces and building APIs to
+        managing databases and deploying applications.
+      </p>
+
+      <p class="description">
+        My focus is writing clean, maintainable code and
+        continuously improving my skills by building
+        real-world projects.
+      </p>
+
+      <div class="focus">
+        <div>
+          <span class="focus-number">01</span>
+          <span>Frontend Development</span>
+        </div>
+
+        <div>
+          <span class="focus-number">02</span>
+          <span>Backend Development</span>
+        </div>
+
+        <div>
+          <span class="focus-number">03</span>
+          <span>Database & Deployment</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-top">
+        <span class="project-label">FEATURED PROJECT</span>
+        <span class="status">LIVE PROJECT</span>
+      </div>
+
+      <div class="project-visual">
+        <div class="project-icon">T.</div>
+        <h3>TULIPA</h3>
+        <p>Flower E-commerce Platform</p>
+      </div>
+
+      <div class="project-info">
+        <p>
+          A full-stack e-commerce application designed
+          to manage flower products and customer orders.
+        </p>
+
+        <div class="stack">
+          <span>React</span>
+          <span>FastAPI</span>
+          <span>PostgreSQL</span>
+          <span>Tailwind CSS</span>
+        </div>
+
+        <a
+          href="https://flores-app-ten.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-link"
+        >
+          Explore live project ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 110px 0;
+    border-top: 1px solid #263247;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 90px;
+  }
+
+  .eyebrow {
+    color: #d6a62e;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+  }
+
+  h2 {
+    font-size: clamp(36px, 4vw, 54px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin: 20px 0 25px;
+  }
+
+  h2 span {
+    display: block;
+    color: #d6a62e;
+  }
+
+  .description {
+    color: #94a3b8;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+  }
+
+  .focus {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 35px;
+  }
+
+  .focus div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #e2e8f0;
+    font-size: 14px;
+  }
+
+  .focus-number {
+    color: #d6a62e;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  .project-card {
+    border: 1px solid #334155;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111d30;
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px;
+    border-bottom: 1px solid #263247;
+  }
+
+  .project-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #94a3b8;
+  }
+
+  .status {
+    color: #d6a62e;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .project-visual {
+    min-height: 230px;
+    background: #192840;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-icon {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    background: #d6a62e;
+    color: #0b1424;
+    font-size: 30px;
+    font-weight: 800;
+    border-radius: 14px;
+  }
+
+  .project-visual h3 {
+    font-size: 28px;
+    letter-spacing: 5px;
+    margin: 15px 0 5px;
+  }
+
+  .project-visual p {
+    color: #94a3b8;
+    font-size: 13px;
+  }
+
+  .project-info {
+    padding: 25px;
+  }
+
+  .project-info > p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 20px 0 25px;
+  }
+
+  .stack span {
+    border: 1px solid #334155;
+    color: #cbd5e1;
+    padding: 7px 10px;
+    font-size: 11px;
+    border-radius: 4px;
+  }
+
+  .project-link {
+    color: #d6a62e;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .project-link:hover {
+    color: #f5c95b;
+  }
+
+  @media (max-width: 850px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    .about {
+      padding: 80px 0;
+    }
+  }
+</style>

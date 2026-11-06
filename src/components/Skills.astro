@@ -1,0 +1,191 @@
+
+<section id="skills" class="skills">
+  <div class="section-heading">
+    <p class="eyebrow">MY TECHNICAL BACKGROUND</p>
+    <h2>Technical <span>Skills.</span></h2>
+    <p class="section-description">
+      Technologies and tools I use to build, develop
+      and deploy modern applications.
+    </p>
+  </div>
+
+  <div class="skills-grid">
+    <article class="skill-card">
+      <div class="card-heading">
+        <span class="number">01</span>
+        <h3>Frontend Development</h3>
+      </div>
+
+      <p>Building responsive and interactive user interfaces.</p>
+
+      <div class="skill-list">
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>Tailwind CSS</span>
+        <span>Bootstrap</span>
+      </div>
+    </article>
+
+    <article class="skill-card">
+      <div class="card-heading">
+        <span class="number">02</span>
+        <h3>Backend Development</h3>
+      </div>
+
+      <p>Developing APIs and server-side application logic.</p>
+
+      <div class="skill-list">
+        <span>Python</span>
+        <span>FastAPI</span>
+        <span>PHP</span>
+        <span>Laravel</span>
+        <span>Java (Basic)</span>
+        <span>HTTP</span>
+      </div>
+    </article>
+
+    <article class="skill-card">
+      <div class="card-heading">
+        <span class="number">03</span>
+        <h3>Databases</h3>
+      </div>
+
+      <p>Working with relational and non-relational databases.</p>
+
+      <div class="skill-list">
+        <span>PostgreSQL</span>
+        <span>MySQL</span>
+        <span>MongoDB</span>
+      </div>
+    </article>
+
+    <article class="skill-card">
+      <div class="card-heading">
+        <span class="number">04</span>
+        <h3>Tools & Technologies</h3>
+      </div>
+
+      <p>Tools for development, version control and deployment.</p>
+
+      <div class="skill-list">
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>Docker</span>
+        <span>Vercel</span>
+        <span>Render</span>
+        <span>CI/CD</span>
+        <span>UiPath (Basic)</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .skills {
+    padding: 110px 0;
+    border-top: 1px solid #263247;
+  }
+
+  .section-heading {
+    max-width: 650px;
+    margin-bottom: 55px;
+  }
+
+  .eyebrow {
+    color: #d6a62e;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(38px, 5vw, 58px);
+    letter-spacing: -2px;
+    margin: 18px 0;
+  }
+
+  .section-heading h2 span {
+    color: #d6a62e;
+  }
+
+  .section-description {
+    color: #94a3b8;
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .skill-card {
+    background: #111d30;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 30px;
+    transition: border-color 0.25s, transform 0.25s;
+  }
+
+  .skill-card:hover {
+    border-color: #d6a62e;
+    transform: translateY(-4px);
+  }
+
+  .card-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .number {
+    color: #d6a62e;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .card-heading h3 {
+    color: #f8fafc;
+    font-size: 19px;
+    margin: 0;
+  }
+
+  .skill-card > p {
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 20px 0;
+  }
+
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skill-list span {
+    color: #cbd5e1;
+    background: #192840;
+    border: 1px solid #334155;
+    padding: 9px 13px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 700px) {
+    .skills {
+      padding: 80px 0;
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+      padding: 24px;
+    }
+  }
+</style>

@@ -1,0 +1,232 @@
+
+<section class="projects" id="projects">
+  <div class="section-header">
+    <p class="eyebrow">MY WORK</p>
+    <h2>Featured <span>Projects.</span></h2>
+    <p class="section-description">
+      A selection of projects where I turn ideas into functional
+      and practical digital solutions.
+    </p>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- TULIPA -->
+    <article class="project-card">
+      <div class="project-preview">
+        <div class="preview-content">
+          <span class="preview-label">FEATURED PROJECT</span>
+          <h3>TULIPA</h3>
+          <p>Online Flower Shop</p>
+          <div class="preview-decoration">
+            <span>✿</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-info">
+        <div class="project-title">
+          <h3>Tulipa — E-commerce</h3>
+          <span class="project-status">Live</span>
+        </div>
+
+        <p>
+          A full-stack e-commerce application for a flower shop,
+          featuring product catalogs, shopping cart, checkout,
+          order management and WhatsApp integration.
+        </p>
+
+        <div class="project-tech">
+          <span>React</span>
+          <span>FastAPI</span>
+          <span>PostgreSQL</span>
+          <span>Docker</span>
+          <span>Tailwind CSS</span>
+          <span>CI/CD</span>
+        </div>
+
+        <div class="project-links">
+          <a
+            href="https://flores-app-ten.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Live Demo ↗
+          </a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<style>
+  .projects {
+    padding: 110px 0;
+    scroll-margin-top: 90px;
+  }
+
+  .section-header {
+    max-width: 650px;
+    margin-bottom: 55px;
+  }
+
+  .eyebrow {
+    color: #d6a62e;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .section-header h2 {
+    font-size: clamp(38px, 5vw, 58px);
+    margin: 15px 0;
+    letter-spacing: -2px;
+  }
+
+  .section-header h2 span {
+    color: #d6a62e;
+  }
+
+  .section-description {
+    color: #94a3b8;
+    line-height: 1.8;
+    font-size: 16px;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project-card {
+    background: #111d30;
+    border: 1px solid #263449;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    border-color: #d6a62e;
+  }
+
+  .project-preview {
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      radial-gradient(circle at center, #263b55 0%, #101b2d 70%);
+    border-bottom: 1px solid #263449;
+    overflow: hidden;
+  }
+
+  .preview-content {
+    text-align: center;
+    position: relative;
+  }
+
+  .preview-label {
+    color: #d6a62e;
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: 700;
+  }
+
+  .preview-content h3 {
+    font-size: 55px;
+    letter-spacing: 8px;
+    margin: 15px 0 0;
+    color: #f8fafc;
+  }
+
+  .preview-content p {
+    color: #94a3b8;
+    font-size: 14px;
+  }
+
+  .preview-decoration {
+    color: #d6a62e;
+    font-size: 35px;
+    margin-top: 10px;
+  }
+
+  .project-info {
+    padding: 30px;
+  }
+
+  .project-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .project-title h3 {
+    font-size: 22px;
+    color: #f8fafc;
+  }
+
+  .project-status {
+    color: #86efac;
+    border: 1px solid #166534;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+  }
+
+  .project-info > p {
+    color: #94a3b8;
+    line-height: 1.8;
+    margin: 18px 0;
+  }
+
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+  }
+
+  .project-tech span {
+    color: #cbd5e1;
+    background: #1e293b;
+    border: 1px solid #334155;
+    padding: 7px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  .project-links {
+    border-top: 1px solid #263449;
+    padding-top: 22px;
+  }
+
+  .project-links a {
+    color: #d6a62e;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .project-links a:hover {
+    color: #f5c94f;
+  }
+
+  @media (max-width: 600px) {
+    .projects {
+      padding: 75px 0;
+    }
+
+    .project-info {
+      padding: 22px;
+    }
+
+    .project-title {
+      align-items: flex-start;
+    }
+  }
+</style>
