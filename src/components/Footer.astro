@@ -5,11 +5,19 @@
 </footer>
 
 <style>
+  .footer,
+  .footer * {
+    box-sizing: border-box;
+  }
+
   .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 12px;
+    width: 100%;
+    min-width: 0;
     padding: 25px 0;
     border-top: 1px solid #263247;
     color: #94a3b8;
@@ -19,14 +27,24 @@
 
   .footer p {
     margin: 0;
+    max-width: 100%;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
   }
 
   @media (max-width: 600px) {
     .footer {
       flex-direction: column;
       align-items: flex-start;
-      gap: 12px;
+      gap: 10px;
       text-align: left;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .footer {
+      font-size: 9px;
+      letter-spacing: 1.5px;
     }
   }
 </style>

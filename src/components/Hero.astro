@@ -69,8 +69,14 @@
     align-items: center;
   }
 
+  .hero,
+  .hero * {
+    box-sizing: border-box;
+  }
+
   .hero-layout {
     width: 100%;
+    min-width: 0;
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
     align-items: center;
@@ -79,6 +85,7 @@
 
   .hero-content {
     max-width: 850px;
+    min-width: 0;
     padding: 80px 0;
   }
 
@@ -195,43 +202,104 @@
     outline-offset: 5px;
   }
 
-  @media (max-width: 700px) {
-    .hero-layout {
-      grid-template-columns: 1fr;
-      gap: 25px;
-    }
-
-    .hero-content {
-      padding: 45px 0 20px;
-    }
-
-    .hero-image {
-      justify-self: center;
-      max-width: 260px;
-    }
-
-    .hero-buttons {
-      gap: 12px;
-    }
+ 
+/* Tablet and mobile */
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
   }
 
-  @media (max-width: 600px) {
-    h1 {
-      letter-spacing: -2px;
-    }
-
-    .technologies {
-      margin-top: 40px;
-    }
+  .hero-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+    min-width: 0;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .hero-buttons a {
-      transition: none;
-    }
-
-    .hero-buttons a:hover {
-      transform: none;
-    }
+  .hero-content {
+    max-width: 100%;
+    min-width: 0;
+    padding: 45px 0 20px;
   }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    line-height: 1.8;
+  }
+
+  h1 {
+    font-size: clamp(42px, 9vw, 58px);
+    letter-spacing: -2px;
+    overflow-wrap: break-word;
+  }
+
+  .hero-description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    padding: 14px 8px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .technologies {
+    margin-top: 35px;
+    gap: 8px;
+  }
+
+  .hero-image {
+    justify-self: center;
+    max-width: 260px;
+    width: 100%;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 380px) {
+  h1 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .hero-buttons {
+    gap: 9px;
+  }
+
+  .hero-buttons a {
+    font-size: 12px;
+    padding: 13px 5px;
+  }
+
+  .technologies span {
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+
+  .hero-image {
+    max-width: 230px;
+  }
+
+  .hero-layout {
+  min-width: 0;
+}
+
+.hero-content {
+  min-width: 0;
+}
+}
+
 </style>
