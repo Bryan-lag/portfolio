@@ -1,0 +1,169 @@
+
+<section id="contact" class="contact" aria-labelledby="contact-title">
+  <div class="contact-content">
+    <p class="eyebrow">LET'S CONNECT</p>
+
+    <h2 id="contact-title">
+      Let's Work <span>Together.</span>
+    </h2>
+
+    <p class="contact-description">
+      Have a project in mind or looking for a developer?
+      I'm open to remote opportunities and collaborations.
+      Feel free to reach out.
+    </p>
+
+    <a
+      class="contact-button"
+      href="mailto:arguetab989@gmail.com"
+      aria-label="Send me an email"
+    >
+      GET IN TOUCH
+    </a>
+
+    <div class="social-links">
+      <a
+        href="https://github.com/Bryan-lag"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub 
+      </a>
+
+      <a href="mailto:arguetab989@gmail.com">
+        Email 
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact,
+  .contact * {
+    box-sizing: border-box;
+  }
+
+  .contact {
+    width: 100%;
+    min-width: 0;
+    padding: 110px 0;
+    border-top: 1px solid #263247;
+  }
+
+  .contact-content {
+    max-width: 750px;
+    min-width: 0;
+  }
+
+  .eyebrow {
+    color: #d6a62e;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+  }
+
+  .contact h2 {
+    font-size: clamp(38px, 5vw, 58px);
+    letter-spacing: -2px;
+    line-height: 1.15;
+    margin: 18px 0;
+    overflow-wrap: anywhere;
+  }
+
+  .contact h2 span {
+    color: #d6a62e;
+  }
+
+  .contact-description {
+    max-width: 550px;
+    color: #94a3b8;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 24px;
+    background: #d6a62e;
+    color: #0b1424;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border: 1px solid #d6a62e;
+    border-radius: 4px;
+    transition: background 0.25s, transform 0.25s;
+  }
+
+  .contact-button:hover {
+    background: #e5b83e;
+    transform: translateY(-3px);
+  }
+
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 35px;
+  }
+
+  .social-links a {
+    color: #94a3b8;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .social-links a:hover {
+    color: #d6a62e;
+  }
+
+  .contact a:focus-visible {
+    outline: 2px solid #d6a62e;
+    outline-offset: 5px;
+  }
+
+  @media (max-width: 700px) {
+    .contact {
+      padding: 80px 0;
+    }
+
+    .contact-description {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .contact {
+      padding: 65px 0;
+    }
+
+    .contact h2 {
+      font-size: 36px;
+      letter-spacing: -1.5px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 3px;
+    }
+
+    .social-links {
+      gap: 20px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact-button {
+      transition: none;
+    }
+
+    .contact-button:hover {
+      transform: none;
+    }
+  }
+</style>
