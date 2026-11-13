@@ -1,43 +1,44 @@
-# Astro Starter Kit: Minimal
+# Bryan Argueta — Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
+Personal portfolio of a full-stack developer based in Guatemala.
+
+**Live:** https://portfolio-two-roan-30.vercel.app
+
+## Stack
+
+- [Astro](https://astro.build): static site, no client-side JavaScript
+- Plain CSS: scoped component styles plus design tokens (CSS variables)
+- [Fontsource](https://fontsource.org): self-hosted fonts (Source Serif 4 and IBM Plex Sans)
+- Vercel for hosting
+
+## Run locally
+
+Requires Node.js 22.23.4 or newer.
+
+```bash
+npm install
+npm run dev       # http://localhost:4321
+npm run build     # production build in dist/
+npm run preview   # serve the production build
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Structure
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+src/
+├── assets/       # images processed by Astro (WebP, responsive sizes)
+├── components/   # Navbar, Hero, Projects, About, Skills, Contact, Footer
+├── layouts/      # Layout.astro: fonts, SEO and social meta tags
+├── pages/        # index.astro
+└── styles/       # global.css: tokens, minimal reset and shared styles
+public/           # static files: favicon, CV, profile photo, og.png
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Design decisions
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **No client-side JavaScript.** The page is static HTML and CSS, so it loads fast and has little to break.
+- **Design tokens.** Colors, fonts and spacing live as CSS variables in `global.css`; components don't hard-code them.
+- **Self-hosted fonts.** No third-party requests, and no layout flash from font swaps.
+- **Optimized images.** Project screenshots go through `astro:assets`, which serves WebP in several sizes.
+- **Accessibility.** Semantic landmarks, visible keyboard focus, `prefers-reduced-motion` support and checked color contrast.
+- **Social preview.** Open Graph and Twitter tags with a 1200 × 630 image.
