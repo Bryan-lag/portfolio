@@ -1,17 +1,17 @@
-@import "tailwindcss";
-
+/* ---------- Variables ---------- */
 :root {
+  /* Color */
   --bg: #0b1424;
   --surface: #111d30;
   --surface-raised: #192840;
   --line: #263247;
   --line-strong: #334155;
+  --line-ui: #64748b;
   --text: #f8fafc;
   --text-soft: #cbd5e1;
   --text-muted: #94a3b8;
   --gold: #d6a62e;
   --gold-hover: #e8b83e;
-  --line-ui: #64748b;
 
   /* Tipografía */
   --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -21,19 +21,22 @@
   --section-space: clamp(64px, 9vw, 112px);
 }
 
+/* ---------- Reset mínimo ---------- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
   width: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  margin: 0;
   min-width: 320px;
   width: 100%;
   background: var(--bg);
@@ -46,10 +49,34 @@ body {
 
 h1,
 h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+
+h1,
+h2,
 h3 {
   font-family: var(--font-display);
   font-weight: 600;
   text-wrap: balance;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 img,
@@ -57,11 +84,13 @@ picture,
 video,
 canvas,
 svg {
+  display: block;
   max-width: 100%;
 }
 
-a {
-  color: inherit;
+img,
+video {
+  height: auto;
 }
 
 :focus-visible {
@@ -71,12 +100,6 @@ a {
 
 section[id] {
   scroll-margin-top: 110px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
 }
 
 /* ---------- Componentes compartidos ---------- */
@@ -123,10 +146,27 @@ section[id] {
 }
 
 .btn-secondary {
-  border-color: var(--line-strong);
+  border-color: var(--line-ui);
   color: var(--text);
 }
 
 .btn-secondary:hover {
   border-color: var(--gold);
+}
+
+/* ---------- Móvil y accesibilidad ---------- */
+@media (max-width: 600px) {
+  section[id] {
+    scroll-margin-top: 90px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn {
+    transition: none;
+  }
 }

@@ -1,8 +1,7 @@
-
 <nav class="navbar" aria-label="Main navigation">
-    <a href="/" class="logo" aria-label="Bryan Argueta - Home">
+  <a href="/" class="logo" aria-label="Bryan Argueta - Home">
     Bryan Argueta<span aria-hidden="true">.</span>
-    </a>
+  </a>
 
   <div class="nav-links">
     <a href="#projects">Projects</a>
@@ -42,7 +41,6 @@
     top: 0;
     z-index: 1000;
     background: var(--bg);
-    box-sizing: border-box;
   }
 
   .logo {
@@ -55,7 +53,7 @@
   }
 
   .logo span {
-    color: #d6a62e;
+    color: var(--gold);
   }
 
   .nav-links {
@@ -65,78 +63,50 @@
   }
 
   .nav-links a {
-    color: #cbd5e1;
+    color: var(--text-soft);
     text-decoration: none;
     font-size: 14px;
     transition: color 0.2s;
   }
 
   .nav-links a:hover {
-    color: #d6a62e;
+    color: var(--gold);
   }
 
   /* Keyboard accessibility */
   .navbar a:focus-visible {
-    outline: 2px solid #d6a62e;
+    outline: 2px solid var(--gold);
     outline-offset: 5px;
     border-radius: 3px;
   }
 
-  /* Mobile */
+  /* Mobile: barra compacta que se queda fija al hacer scroll */
   @media (max-width: 600px) {
     .navbar {
       min-height: auto;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      gap: 18px;
-      padding: 18px 0;
+      gap: 0;
+      padding: 12px 0 2px;
     }
 
     .logo {
-      font-size: 22px;
+      font-size: 20px;
     }
 
     .nav-links {
       width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 20px;
-    }
-
-    .nav-links a {
-      font-size: 13px;
-    }
-  }
-
-  /* Mobile */
-  @media (max-width: 600px) {
-    .navbar {
-      position: static;
-      min-height: auto;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      gap: 6px;
-      padding: 18px 0 10px;
-    }
-
-    .logo {
-      font-size: 22px;
-    }
-
-    .nav-links {
-      width: 100%;
-      display: flex;
       flex-wrap: wrap;
       gap: 0 24px;
     }
 
     .nav-links a {
-      font-size: 15px;
-      padding: 10px 0;
+      font-size: 14px;
+      padding: 8px 0;
     }
 
+   
     .nav-external {
       display: none;
     }
@@ -147,15 +117,12 @@
     .nav-links {
       gap: 0 18px;
     }
+  }
 
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
     .nav-links a {
-      font-size: 14px;
+      transition: none;
     }
   }
-
-  @media (max-width: 600px) {
-  section[id] {
-    scroll-margin-top: 24px;
-  }
-}
 </style>
