@@ -1,180 +1,67 @@
+<section id="contact" class="section" aria-labelledby="contact-title">
+  <div class="contact">
+    <h2 id="contact-title" class="section-title">Contact</h2>
 
-<section id="contact" class="contact" aria-labelledby="contact-title">
-  <div class="contact-content">
-    <p class="eyebrow">LET'S CONNECT</p>
-
-    <h2 id="contact-title">
-      Let's Work <span>Together.</span>
-    </h2>
-
-    <p class="contact-description">
-      Have a project in mind or looking for a developer?
-      I'm open to remote opportunities and collaborations.
-      Feel free to reach out.
+    <p class="contact-text">
+      I'm looking for a remote full-stack role and I'm open to collaborations.
+      The quickest way to reach me is email.
     </p>
 
-    <a
-      class="contact-button"
-      href="mailto:arguetab989@gmail.com"
-      aria-label="Send me an email"
-    >
-      GET IN TOUCH
+    <a class="btn btn-primary" href="mailto:arguetab989@gmail.com">
+      arguetab989@gmail.com
     </a>
 
-    <div class="social-links">
-      <a
-        href="https://github.com/Bryan-lag"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Visit my GitHub profile (opens in a new tab)"
-      >
-        GitHub
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/bryan-argueta-9986a32b2/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Visit my LinkedIn profile (opens in a new tab)"
-      >
-        LinkedIn
-      </a>
-
-      <a href="mailto:arguetab989@gmail.com" aria-label="Send me an email">
-        Email
-      </a>
-    </div>
+    <ul class="links" aria-label="Profiles">
+      <li>
+        <a
+          href="https://github.com/Bryan-lag"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub profile (opens in a new tab)"
+        >
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/bryan-argueta-9986a32b2/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn profile (opens in a new tab)"
+        >
+          LinkedIn
+        </a>
+      </li>
+    </ul>
   </div>
 </section>
 
 <style>
-  .contact,
-  .contact * {
-    box-sizing: border-box;
+  .contact-text {
+    max-width: 52ch;
+    margin: 0 0 28px;
+    color: var(--text-soft);
+    font-size: 17px;
+    line-height: 1.75;
   }
 
-  .contact {
-    width: 100%;
-    min-width: 0;
-    padding: 110px 0;
-    border-top: 1px solid #263247;
-  }
-
-  .contact-content {
-    max-width: 750px;
-    min-width: 0;
-  }
-
-  .eyebrow {
-    color: #d6a62e;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 4px;
-  }
-
-  .contact h2 {
-    font-size: clamp(38px, 5vw, 58px);
-    letter-spacing: -2px;
-    line-height: 1.15;
-    margin: 18px 0;
-    overflow-wrap: anywhere;
-  }
-
-  .contact h2 span {
-    color: #d6a62e;
-  }
-
-  .contact-description {
-    max-width: 550px;
-    color: #94a3b8;
-    font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 30px;
-  }
-
-  .contact-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 15px 24px;
-    background: #d6a62e;
-    color: #0b1424;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-decoration: none;
-    border: 1px solid #d6a62e;
-    border-radius: 4px;
-    transition: background 0.25s, transform 0.25s;
-  }
-
-  .contact-button:hover {
-    background: #e5b83e;
-    transform: translateY(-3px);
-  }
-
-  .social-links {
+  .links {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
-    margin-top: 35px;
+    gap: 24px;
+    margin: 32px 0 0;
+    padding: 0;
+    list-style: none;
   }
 
-  .social-links a {
-    color: #94a3b8;
-    font-size: 13px;
-    text-decoration: none;
-    transition: color 0.2s;
+  .links a {
+    color: var(--text-muted);
+    font-size: 15px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 
-  .social-links a:hover {
-    color: #d6a62e;
-  }
-
-  .contact a:focus-visible {
-    outline: 2px solid #d6a62e;
-    outline-offset: 5px;
-  }
-
-  @media (max-width: 700px) {
-    .contact {
-      padding: 80px 0;
-    }
-
-    .contact-description {
-      font-size: 14px;
-    }
-  }
-
-  @media (max-width: 380px) {
-    .contact {
-      padding: 65px 0;
-    }
-
-    .contact h2 {
-      font-size: 36px;
-      letter-spacing: -1.5px;
-    }
-
-    .eyebrow {
-      font-size: 10px;
-      letter-spacing: 3px;
-    }
-
-    .social-links {
-      gap: 20px;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .contact-button,
-    .social-links a {
-      transition: none;
-    }
-
-    .contact-button:hover {
-      transform: none;
-    }
+  .links a:hover {
+    color: var(--gold);
   }
 </style>

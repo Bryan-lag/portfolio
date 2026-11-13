@@ -1,312 +1,131 @@
+---
+import { Image } from "astro:assets";
+import tulipaPreview from "../assets/tulipa-preview.png";
+---
 
-<section class="projects" id="projects" aria-labelledby="projects-title">
-  <div class="section-header">
-    <p class="eyebrow">MY WORK</p>
-    <h2 id="projects-title">
-      Featured <span>Projects.</span>
-    </h2>
-    <p class="section-description">
-      A selection of projects where I turn ideas into functional
-      and practical digital solutions.
-    </p>
-  </div>
+<section id="projects" class="section" aria-labelledby="projects-title">
+  <h2 id="projects-title" class="section-title">Projects</h2>
 
-  <div class="projects-grid">
-    <article class="project-card">
-      <div class="project-preview">
-        <img
-          src="/images/tulipa-preview.png"
-          alt="Tulipa online flower shop showing its product catalog and storefront"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
+  <article class="project">
+    <div class="preview">
+      <Image
+        src={tulipaPreview}
+        alt="Tulipa online flower shop showing its home page with a featured bouquet"
+        widths={[480, 800, 1200]}
+        sizes="(max-width: 800px) 100vw, 55vw"
+        format="webp"
+        loading="lazy"
+      />
+    </div>
 
-      <div class="project-info">
-        <div class="project-title">
-          <h3>Tulipa — E-commerce</h3>
-          <span class="project-status">Live</span>
-        </div>
+    <div class="details">
+      <h3>Tulipa</h3>
+      <p class="kind">Online flower shop</p>
 
+      <div class="prose">
         <p>
-          A full-stack e-commerce application for a flower shop,
-          featuring product catalogs, shopping cart, checkout,
-          order management and WhatsApp integration.
+          A full-stack shop with a product catalog, a shopping cart that never
+          goes over the available stock, checkout, order management and
+          WhatsApp contact.
         </p>
-
-        <div class="project-tech" aria-label="Technologies used">
-          <span>React</span>
-          <span>FastAPI</span>
-          <span>PostgreSQL</span>
-          <span>Docker</span>
-          <span>Tailwind CSS</span>
-          <span>CI/CD</span>
-        </div>
-
-        <div class="project-links">
-          <a
-            href="https://flores-app-ten.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="View Tulipa live demo (opens in a new tab)"
-          >
-            Live Demo <span aria-hidden="true">↗</span>
-          </a>
-        </div>
+        <p>
+          The React front end is deployed on Vercel and the FastAPI API on
+          Render, with PostgreSQL as the database. Docker Compose covers local
+          development, and GitHub Actions runs lint, tests and a build on
+          every push.
+        </p>
       </div>
-    </article>
-  </div>
+
+      <p class="stack">
+        React, FastAPI, PostgreSQL, Docker, Tailwind CSS, GitHub Actions
+      </p>
+
+      <div class="links">
+        <a
+          href="https://flores-app-ten.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View Tulipa live demo (opens in a new tab)"
+        >
+          Live demo 
+        </a>
+        <a
+          href="https://github.com/Bryan-lag/flores-app"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View Tulipa source code on GitHub (opens in a new tab)"
+        >
+          Source code 
+        </a>
+      </div>
+    </div>
+  </article>
 </section>
 
 <style>
-  .projects,
-  .projects * {
-    box-sizing: border-box;
-  }
-
-  .projects {
-    width: 100%;
-    min-width: 0;
-    padding: 110px 0;
-    scroll-margin-top: 90px;
-  }
-
-  .projects .section-header {
-    width: 100%;
-    max-width: 650px;
-    min-width: 0;
-    margin-bottom: 55px;
-  }
-
-  .projects .eyebrow {
-    color: #d6a62e;
-    letter-spacing: 4px;
-    font-size: 13px;
-    font-weight: 700;
-  }
-
-  .projects .section-header h2 {
-    font-size: clamp(38px, 5vw, 58px);
-    margin: 15px 0;
-    letter-spacing: -2px;
-    overflow-wrap: break-word;
-  }
-
-  .projects .section-header h2 span {
-    color: #d6a62e;
-  }
-
-  .projects .section-description {
-    color: #94a3b8;
-    line-height: 1.8;
-    font-size: 16px;
-  }
-
-  .projects-grid {
+  .project {
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 30px;
-    min-width: 0;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    gap: clamp(24px, 5vw, 64px);
+    align-items: center;
   }
 
-  .project-card {
-    width: 100%;
-    min-width: 0;
-    background: #111d30;
-    border: 1px solid #263449;
-    border-radius: 10px;
+  .project + .project {
+    margin-top: 72px;
+  }
+
+  .preview {
     overflow: hidden;
-    transition: border-color 0.3s ease;
+    border: 1px solid var(--line-strong);
+    border-radius: 6px;
+    background: var(--surface);
   }
 
-  .project-preview {
-    width: 100%;
-    min-width: 0;
-    background: #101b2d;
-    border-bottom: 1px solid #263449;
-    overflow: hidden;
-  }
-
-  .project-preview img {
+  .preview :global(img) {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: contain;
-    object-position: center;
-    transition: transform 0.3s ease;
   }
 
-  .project-card:hover {
-    border-color: #d6a62e;
-  }
-
-  .project-card:hover .project-preview img {
-    transform: scale(1.02);
-  }
-
-  .project-info {
-    padding: 30px;
-    min-width: 0;
-  }
-
-  .project-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .project-title h3 {
-    font-size: 22px;
-    color: #f8fafc;
+  h3 {
     margin: 0;
-    overflow-wrap: anywhere;
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.15;
   }
 
-  .project-status {
-    color: #86efac;
-    border: 1px solid #166534;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 11px;
-    white-space: nowrap;
-  }
-
-  .project-info > p {
-    color: #94a3b8;
-    line-height: 1.8;
-    margin: 18px 0;
+  .kind {
+    margin: 4px 0 20px;
+    color: var(--text-muted);
     font-size: 15px;
   }
 
-  .project-tech {
+  .stack {
+    margin: 4px 0 24px;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .links {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin: 25px 0;
+    gap: 8px 28px;
   }
 
-  .project-tech span {
-    color: #cbd5e1;
-    background: #1e293b;
-    border: 1px solid #334155;
-    padding: 7px 12px;
-    border-radius: 4px;
-    font-size: 12px;
+  .links a {
+    color: var(--gold);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 
-  .project-links {
-    border-top: 1px solid #263449;
-    padding-top: 22px;
+  .links a:hover {
+    color: var(--gold-hover);
   }
 
-  .project-links a {
-    display: inline-block;
-    color: #d6a62e;
-    font-weight: 700;
-    font-size: 14px;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  .project-links a:hover {
-    color: #f5c94f;
-  }
-
-  .project-links a:focus-visible {
-    outline: 2px solid #d6a62e;
-    outline-offset: 5px;
-    border-radius: 3px;
-  }
-
-  @media (max-width: 850px) {
-    .projects {
-      padding: 85px 0;
-    }
-
-    .projects .section-header {
-      margin-bottom: 40px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .projects {
-      padding: 65px 0;
-    }
-
-    .projects .section-header {
-      margin-bottom: 35px;
-    }
-
-    .projects .eyebrow {
-      font-size: 11px;
-      letter-spacing: 3px;
-    }
-
-    .projects .section-header h2 {
-      font-size: clamp(34px, 8vw, 44px);
-      letter-spacing: -1.5px;
-    }
-
-    .projects .section-description {
-      font-size: 14px;
-    }
-
-    .project-info {
-      padding: 22px;
-    }
-
-    .project-title {
-      align-items: flex-start;
-    }
-
-    .project-title h3 {
-      font-size: 19px;
-    }
-
-    .project-info > p {
-      font-size: 14px;
-    }
-
-    .project-tech {
-      gap: 8px;
-      margin: 20px 0;
-    }
-
-    .project-tech span {
-      font-size: 11px;
-      padding: 7px 9px;
-    }
-  }
-
-  @media (max-width: 380px) {
-    .projects {
-      padding: 50px 0;
-    }
-
-    .project-info {
-      padding: 17px;
-    }
-
-    .projects .section-header h2 {
-      font-size: 34px;
-    }
-
-    .project-title h3 {
-      font-size: 18px;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .project-card,
-    .project-preview img,
-    .project-links a {
-      transition: none;
-    }
-
-    .project-card:hover .project-preview img {
-      transform: none;
+  @media (max-width: 800px) {
+    .project {
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 </style>

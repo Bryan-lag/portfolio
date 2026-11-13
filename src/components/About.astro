@@ -1,176 +1,45 @@
+<section id="about" class="section" aria-labelledby="about-title">
+  <div class="about">
+    <h2 id="about-title" class="section-title">About me</h2>
 
-<section id="about" class="about" aria-labelledby="about-title">
-  <div class="about-content">
-    <div class="about-text">
-      <p class="eyebrow">GET TO KNOW ME</p>
-
-      <h2 id="about-title">
-        Turning ideas into
-        <span>real solutions.</span>
-      </h2>
-
-      <p class="description">
-        I'm a Full-Stack Developer passionate about building
-        modern, functional and user-friendly web applications.
+    <div class="prose">
+      <p>
+        I'm Bryan, a full-stack developer based in Guatemala. I like owning a
+        feature from start to finish: the interface, the API, the database and
+        the deploy.
       </p>
 
-      <p class="description">
-        I enjoy working across the entire development process,
-        from designing interfaces and building APIs to
-        managing databases and deploying applications.
+      <p>
+        My main project is Tulipa, an online flower shop built with React,
+        FastAPI and PostgreSQL. It runs in Docker, and every push to GitHub
+        runs lint, tests and a build. Getting that pipeline green taught me
+        more than writing the code did: a lockfile that only broke on Linux,
+        and a test that only failed when my backend wasn't running.
       </p>
 
-      <p class="description">
-        My focus is writing clean, maintainable code and
-        continuously improving my skills by building
-        real-world projects.
+      <p>
+        Right now I'm building FeedbackLoop, a feedback board where users
+        suggest ideas and vote on them. I'm designing it so the database
+        itself rejects a second vote from the same user.
       </p>
-
-      <ul class="focus" aria-label="Areas of focus">
-        <li>
-          <span class="focus-number" aria-hidden="true">01</span>
-          <span>Frontend Development</span>
-        </li>
-
-        <li>
-          <span class="focus-number" aria-hidden="true">02</span>
-          <span>Backend Development</span>
-        </li>
-
-        <li>
-          <span class="focus-number" aria-hidden="true">03</span>
-          <span>Database & Deployment</span>
-        </li>
-      </ul>
     </div>
   </div>
 </section>
 
 <style>
-  .about,
-  .about * {
-    box-sizing: border-box;
-  }
-
   .about {
-    width: 100%;
-    min-width: 0;
-    padding: 110px 0;
-    border-top: 1px solid #263247;
-  }
-
-  .about-content {
-    width: 100%;
-    max-width: 850px;
-    min-width: 0;
-  }
-
-  .about-text {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .eyebrow {
-    color: #d6a62e;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 4px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: clamp(24px, 5vw, 72px);
   }
 
   .about h2 {
-    font-size: clamp(36px, 4vw, 54px);
-    line-height: 1.15;
-    letter-spacing: -2px;
-    margin: 20px 0 25px;
-    overflow-wrap: break-word;
+    margin: 0;
   }
 
-  .about h2 span {
-    display: block;
-    color: #d6a62e;
-  }
-
-  .description {
-    color: #94a3b8;
-    font-size: 15px;
-    line-height: 1.9;
-    margin-bottom: 18px;
-  }
-
-  .focus {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    margin-top: 35px;
-    padding: 0;
-    list-style: none;
-  }
-
-  .focus li {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    color: #e2e8f0;
-    font-size: 14px;
-  }
-
-  .focus-number {
-    flex-shrink: 0;
-    color: #d6a62e;
-    font-weight: 700;
-    font-size: 13px;
-  }
-
-  @media (max-width: 850px) {
+  @media (max-width: 800px) {
     .about {
-      padding: 80px 0;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .about {
-      padding: 65px 0;
-    }
-
-    .eyebrow {
-      font-size: 11px;
-      letter-spacing: 3px;
-    }
-
-    .about h2 {
-      font-size: clamp(34px, 8vw, 44px);
-      letter-spacing: -1.5px;
-    }
-
-    .description {
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .focus {
-      gap: 16px;
-      margin-top: 28px;
-    }
-  }
-
-  @media (max-width: 380px) {
-    .about {
-      padding: 50px 0;
-    }
-
-    .eyebrow {
-      font-size: 10px;
-      letter-spacing: 2.5px;
-    }
-
-    .about h2 {
-      font-size: 34px;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .about {
-      scroll-behavior: auto;
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 </style>

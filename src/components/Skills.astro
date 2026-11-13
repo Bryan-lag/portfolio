@@ -1,279 +1,64 @@
+<section id="skills" class="section" aria-labelledby="skills-title">
+  <h2 id="skills-title" class="section-title">Skills</h2>
 
-<section id="skills" class="skills" aria-labelledby="skills-title">
-  <div class="section-heading">
-    <p class="eyebrow">MY TECHNICAL BACKGROUND</p>
-
-    <h2 id="skills-title">
-      Technical <span>Skills.</span>
-    </h2>
-
-    <p class="section-description">
-      Technologies and tools I use to build, develop
-      and deploy modern applications.
-    </p>
-  </div>
-
-  <div class="skills-grid">
-    <article class="skill-card">
-      <div class="card-heading">
-        <span class="number" aria-hidden="true">01</span>
-        <h3>Frontend Development</h3>
-      </div>
-
-      <p>Building responsive and interactive user interfaces.</p>
-
-      <ul class="skill-list" aria-label="Frontend technologies">
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>Tailwind CSS</li>
-        <li>Bootstrap</li>
-      </ul>
-    </article>
-
-    <article class="skill-card">
-      <div class="card-heading">
-        <span class="number" aria-hidden="true">02</span>
-        <h3>Backend Development</h3>
-      </div>
-
-      <p>Developing APIs and server-side application logic.</p>
-
-      <ul class="skill-list" aria-label="Backend technologies">
-        <li>Python</li>
-        <li>FastAPI</li>
-        <li>PHP</li>
-        <li>Laravel</li>
-        <li>Java (Basic)</li>
-        <li>HTTP</li>
-      </ul>
-    </article>
-
-    <article class="skill-card">
-      <div class="card-heading">
-        <span class="number" aria-hidden="true">03</span>
-        <h3>Databases</h3>
-      </div>
-
-      <p>Working with relational and non-relational databases.</p>
-
-      <ul class="skill-list" aria-label="Database technologies">
-        <li>PostgreSQL</li>
-        <li>MySQL</li>
-        <li>MongoDB</li>
-      </ul>
-    </article>
-
-    <article class="skill-card">
-      <div class="card-heading">
-        <span class="number" aria-hidden="true">04</span>
-        <h3>Tools & Technologies</h3>
-      </div>
-
-      <p>Tools for development, version control and deployment.</p>
-
-      <ul class="skill-list" aria-label="Development tools">
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>Docker</li>
-        <li>Vercel</li>
-        <li>Render</li>
-        <li>CI/CD</li>
-        <li>UiPath (Basic)</li>
-      </ul>
-    </article>
-  </div>
+  <dl class="skill-rows">
+    <div class="row">
+      <dt>Front end</dt>
+      <dd>JavaScript, React, HTML, CSS, Tailwind CSS</dd>
+    </div>
+    <div class="row">
+      <dt>Back end</dt>
+      <dd>Python, FastAPI, PHP, Laravel</dd>
+    </div>
+    <div class="row">
+      <dt>Databases</dt>
+      <dd>PostgreSQL, MySQL, MongoDB</dd>
+    </div>
+    <div class="row">
+      <dt>Testing</dt>
+      <dd>Vitest, Testing Library</dd>
+    </div>
+    <div class="row">
+      <dt>Delivery</dt>
+      <dd>Git, GitHub Actions, Docker, Vercel, Render</dd>
+    </div>
+    <div class="row">
+      <dt>Just the basics</dt>
+      <dd>Java, UiPath</dd>
+    </div>
+  </dl>
 </section>
 
 <style>
-  .skills,
-  .skills * {
-    box-sizing: border-box;
+  .skill-rows {
+    margin: 0;
   }
 
-  .skills {
-    width: 100%;
-    min-width: 0;
-    padding: 110px 0;
-    border-top: 1px solid #263247;
+  .row {
+    display: grid;
+    grid-template-columns: minmax(140px, 0.3fr) minmax(0, 1fr);
+    gap: 8px 32px;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
   }
 
-  .section-heading {
-    max-width: 650px;
-    min-width: 0;
-    margin-bottom: 55px;
-  }
-
-  .eyebrow {
-    color: #d6a62e;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 4px;
-  }
-
-  .section-heading h2 {
-    font-size: clamp(34px, 5vw, 58px);
-    letter-spacing: -2px;
-    overflow-wrap: anywhere;
-    margin: 18px 0;
-  }
-
-  .section-heading h2 span {
-    color: #d6a62e;
-  }
-
-  .section-description {
-    color: #94a3b8;
-    line-height: 1.8;
+  dt {
+    color: var(--text-muted);
     font-size: 15px;
   }
 
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-    min-width: 0;
-  }
-
-  .skill-card {
-    min-width: 0;
-    background: #111d30;
-    border: 1px solid #334155;
-    border-radius: 8px;
-    padding: 30px;
-    transition: border-color 0.25s, transform 0.25s;
-  }
-
-  .skill-card:hover {
-    border-color: #d6a62e;
-    transform: translateY(-4px);
-  }
-
-  .card-heading {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px 15px;
-    min-width: 0;
-  }
-
-  .number {
-    flex-shrink: 0;
-    color: #d6a62e;
-    font-size: 13px;
-    font-weight: 700;
-  }
-
-  .card-heading h3 {
-    min-width: 0;
-    color: #f8fafc;
-    font-size: 19px;
-    overflow-wrap: anywhere;
+  dd {
     margin: 0;
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.6;
   }
 
-  .skill-card > p {
-    color: #94a3b8;
-    font-size: 13px;
-    line-height: 1.7;
-    margin: 20px 0;
-  }
-
-  .skill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    min-width: 0;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  .skill-list li {
-    max-width: 100%;
-    color: #cbd5e1;
-    background: #192840;
-    border: 1px solid #334155;
-    padding: 9px 13px;
-    border-radius: 4px;
-    font-size: 12px;
-    overflow-wrap: anywhere;
-  }
-
-  .skill-card:focus-within {
-    border-color: #d6a62e;
-  }
-
-  @media (max-width: 850px) {
-    .skills {
-      padding: 90px 0;
-    }
-
-    .skill-card {
-      padding: 25px;
-    }
-  }
-
-  @media (max-width: 700px) {
-    .skills {
-      padding: 80px 0;
-    }
-
-    .skills-grid {
+  @media (max-width: 600px) {
+    .row {
       grid-template-columns: minmax(0, 1fr);
-      gap: 16px;
-    }
-
-    .section-heading {
-      margin-bottom: 35px;
-    }
-
-    .skill-card {
-      padding: 24px;
-    }
-  }
-
-  @media (max-width: 380px) {
-    .skills {
-      padding: 65px 0;
-    }
-
-    .section-heading h2 {
-      font-size: 34px;
-      letter-spacing: -1.5px;
-    }
-
-    .eyebrow {
-      font-size: 10px;
-      letter-spacing: 3px;
-    }
-
-    .skill-card {
-      padding: 20px;
-    }
-
-    .card-heading h3 {
-      font-size: 17px;
-    }
-
-    .skill-list {
-      gap: 8px;
-    }
-
-    .skill-list li {
-      padding: 8px 10px;
-      font-size: 11px;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .skill-card {
-      transition: none;
-    }
-
-    .skill-card:hover {
-      transform: none;
+      gap: 2px;
+      padding: 14px 0;
     }
   }
 </style>

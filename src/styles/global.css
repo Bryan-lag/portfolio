@@ -1,5 +1,25 @@
-
 @import "tailwindcss";
+
+:root {
+  --bg: #0b1424;
+  --surface: #111d30;
+  --surface-raised: #192840;
+  --line: #263247;
+  --line-strong: #334155;
+  --text: #f8fafc;
+  --text-soft: #cbd5e1;
+  --text-muted: #94a3b8;
+  --gold: #d6a62e;
+  --gold-hover: #e8b83e;
+  --line-ui: #64748b;
+
+  /* Tipografía */
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Source Serif 4 Variable", Georgia, "Times New Roman", serif;
+
+  /* Espacio vertical de las secciones */
+  --section-space: clamp(64px, 9vw, 112px);
+}
 
 *,
 *::before,
@@ -16,10 +36,20 @@ body {
   margin: 0;
   min-width: 320px;
   width: 100%;
-  background: #0b1424;
-  color: #f8fafc;
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-wrap: balance;
 }
 
 img,
@@ -34,6 +64,11 @@ a {
   color: inherit;
 }
 
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
 section[id] {
   scroll-margin-top: 110px;
 }
@@ -42,4 +77,56 @@ section[id] {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* ---------- Componentes compartidos ---------- */
+.section {
+  padding: var(--section-space) 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-title {
+  font-size: clamp(30px, 3.6vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 24px;
+}
+
+.prose p {
+  max-width: 62ch;
+  margin: 0 0 1.1em;
+  color: var(--text-soft);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  background: var(--gold-hover);
+}
+
+.btn-secondary {
+  border-color: var(--line-strong);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold);
 }
